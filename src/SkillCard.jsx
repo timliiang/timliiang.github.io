@@ -1,9 +1,9 @@
 import './SkillCard.css'
 
-export default function SkillCard(img, txt) {
+export default function SkillCard(img, name) {
     return(
-        <div class="skillCardContainer">
-
+        <div className="skillCardContainer">
+            <p>{name}</p>
         </div>
     );
 }

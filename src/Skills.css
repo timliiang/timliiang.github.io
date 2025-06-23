@@ -20,5 +20,13 @@
         height: 64px;
         border: none;
         margin: 0px;
+        cursor: pointer;
+    }
+    button:hover {
+            background-color:#b31d1d;
+            transition-duration: 400ms;
+    }
+    li {
+      display: inline-block;  
     }
 }
