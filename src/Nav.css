@@ -1,0 +1,31 @@
+
+.navContainer {
+    position: fixed;
+    left: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: calc(45% - (400px / 2));
+    gap: 20px;
+}
+
+.navList {
+    list-style-type: none;
+    padding: 0px;
+    display: inline-block;
+    li {
+        margin-top: 100%;
+        margin-bottom: 100%;
+        font-size: 24px;
+    }
+}
+
+.navRect {
+    background-color: #DADADA;
+    width: 32px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    transform-origin: 50% 50%;
+    display: inline-block;
+}
