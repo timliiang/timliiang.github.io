@@ -24,9 +24,6 @@ function About() {
         <ul className="links">
           <li><a href="https://github.com/timliiang"><img src='github.png'></img></a></li>
           <li><a href="https://www.linkedin.com/in/tim726/"><img src='linkedin.webp'></img></a></li>
-          <li><a><img></img></a></li>
-          <li><a><img></img></a></li>
-          <li><a><img></img></a></li>
           <li><a href="mailto:timliang726@gmail.com"><img src="email.png"></img></a></li>
         </ul>
       </div>

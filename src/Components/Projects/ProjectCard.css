@@ -1,0 +1,8 @@
+.projectCardContainer {
+    margin: 20px;
+    background-color: red;
+    img {
+        width: 300px;
+        height: 225px;
+    }
+}

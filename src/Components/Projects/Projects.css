@@ -1,0 +1,17 @@
+.projectsContainer {
+    min-height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projectsBox {
+    width: 1050px;
+    border: red solid 2px;
+    padding: 0px;
+
+    li {
+        display: inline-block;
+    }
+}

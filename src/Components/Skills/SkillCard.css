@@ -1,0 +1,11 @@
+.skillCardContainer {
+    margin: 20px;
+    background-color: #818181;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    img {
+        width: 60px;
+        height: 60px;
+    }
+}
