@@ -11,12 +11,13 @@ export default function Skills() {
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg', name: 'JavaScript'},
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg', name: 'HTML5'},
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg', name: 'CSS3'},
-        { img: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Racket-logo.svg', name: 'Racket'} /* This one from wikipedia */
+        { img: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Racket-logo.svg', name: 'Racket'}, /* This one from wikipedia */
+        { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg', name: "Bash"}
     ];
     const tools = [
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg', name: 'VSC'},
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg', name: 'Linux'},
-        { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', name: 'GitHub'},
+        { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg', name: 'Git'},
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg', name: 'Figma'}
     ];
     const frameworks = [
