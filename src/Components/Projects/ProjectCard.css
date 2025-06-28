@@ -1,8 +1,18 @@
 .projectCardContainer {
     margin: 20px;
-    background-color: red;
+    background-color: var(--bg);
+    border: 1px var(--border-muted) solid;
+    border-radius: 1rem;
+    overflow: hidden;
     img {
+        margin: 1vw;
+        margin-bottom: 0px !important;
         width: 300px;
         height: 225px;
+    }
+    h3 {
+        padding: 1vh;
+        padding-top: 0px !important;
+        font-size: 20px;
     }
 }

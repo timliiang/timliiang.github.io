@@ -1,6 +1,6 @@
 import './ProjectCard.css'
 
-export default function ProjectCard({ name, git, img, tech }) {
+export default function ProjectCard({ name, git, img }) {
 
     function displayTech() {
         return tech.map(item => (
@@ -11,9 +11,7 @@ export default function ProjectCard({ name, git, img, tech }) {
     return(
         <div className="projectCardContainer">
             <img src={img}></img>
-            <p>{name}</p>
-            <ul>{displayTech}</ul>
-            asd
+            <h3>{name}</h3>
         </div>
     );
 }

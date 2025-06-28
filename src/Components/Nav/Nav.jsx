@@ -1,6 +1,9 @@
 import './Nav.css'
 
 export default function Nav() {
+    console.log(window.visualViewport.width);
+    console.log(window.visualViewport.height);
+
     return (
         <>
             <div className="navContainer">

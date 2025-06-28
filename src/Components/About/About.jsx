@@ -11,20 +11,20 @@ function About() {
         <h2>Fullstack Developer</h2>
         <p>based in Toronto, ON</p>
         <br/>
-        <span>
+        <p>
           2nd Year Undergraduate<br/>
           CS @ University of Waterloo &<br/>
           BBA @ Wilfrid Laurier University<br/>
-        </span>
+        </p>
       </div>
       <div className="side">
         <img className="profile" src="src/assets/profile.jpg"></img>
       </div>
       <div className="side">
         <ul className="links">
-          <li><a href="https://github.com/timliiang"><img src='github.png'></img></a></li>
-          <li><a href="https://www.linkedin.com/in/tim726/"><img src='linkedin.webp'></img></a></li>
-          <li><a href="mailto:timliang726@gmail.com"><img src="email.png"></img></a></li>
+          <li><a href="https://github.com/timliiang" target="_blank"><img src='github.png'></img></a></li>
+          <li><a href="https://www.linkedin.com/in/tim726/" target="_blank"><img src='linkedin.webp'></img></a></li>
+          <li><a href="mailto:timliang726@gmail.com" target="_blank"><img src="email.png"></img></a></li>
         </ul>
       </div>
     </div>

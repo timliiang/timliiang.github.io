@@ -3,16 +3,13 @@ import './Projects.css'
 
 export default function Projects() {
     const projects = [
-        {name: "temp1", git: "", img: "", tech: ["Java", "VSC", "AWS"]},
-        {name: "temp2", git: "", img: "", tech: ["", "", ""]},
-        {name: "temp2", git: "", img: "", tech: ["", "", ""]},
-        {name: "temp3", git: "", img: "", tech: ["", "", ""]}
+        {name: "The Little Knight", git: "a", img: "./src/assets/projects/boss.png"}
     ];
 
     function mapProject(arr) {
         return arr.map(item => (
             <li key={item.name}>
-                <ProjectCard name={item.name}/>
+                <ProjectCard name={item.name} git={item.git} img={item.img} tech={item.tech}/>
             </li>
         ));
     }

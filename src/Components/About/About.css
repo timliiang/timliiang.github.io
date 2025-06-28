@@ -7,7 +7,7 @@
 }
 
 .bar {
-  background-color: #D9D9D9;
+  background-color: var(--text);
   width: 202px;
   height: 9px;
   margin: auto;
@@ -34,5 +34,5 @@
 .profile {
   width: 324px;
   height: 324px;
-  border: 2px white solid;
+  border: 1px var(--border) solid;
 }
