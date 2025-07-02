@@ -18,7 +18,7 @@ function About() {
         </p>
       </div>
       <div className="side">
-        <img className="profile" src="src/assets/profile.jpg"></img>
+        <img className="profile" src="./profile.jpg"></img>
       </div>
       <div className="side">
         <ul className="links">

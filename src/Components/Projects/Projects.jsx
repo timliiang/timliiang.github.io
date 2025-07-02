@@ -3,7 +3,7 @@ import './Projects.css'
 
 export default function Projects() {
     const projects = [
-        {name: "The Little Knight", git: "a", img: "./src/assets/projects/boss.png"}
+        {name: "The Little Knight", git: "a", img: "./boss.png"}
     ];
 
     function mapProject(arr) {

@@ -25,7 +25,7 @@
         cursor: pointer;
     }
     button:hover {
-            background-color:#b31d1d;
+            background-color: var(--highlight);
             transition-duration: 400ms;
     }
     li {
