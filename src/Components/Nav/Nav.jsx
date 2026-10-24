@@ -3,7 +3,7 @@ import { Moon, Sun } from '@phosphor-icons/react'
 
 const sections = [
     { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
+    //{ id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
 ];
 

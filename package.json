@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-website",
+  "name": "timliiang-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://timliiang.github.io/",
   "type": "module",
   "scripts": {
