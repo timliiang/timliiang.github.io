@@ -1,54 +1,130 @@
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url('/fonts/JetBrainsMono-Bold.woff2');
-  font-weight: bold;
-}
+@import "tailwindcss";
 
+/* Theme values live in plain CSS variables so they can flip between light and
+   dark. Light is the default; dark comes from the OS setting unless the theme
+   toggle has pinned one via html[data-theme]. Neutral (zero-chroma) greys keep
+   dark mode close to black instead of navy. */
 :root {
-  color: var(--text); /* #ffffff */
-  font-family: "JetBrains Mono";
-  background-color: var(--bg-dark);/* #13171B */
-  text-align: center;
-  scroll-behavior: smooth;
-
-  --bg-dark: oklch(0.1 0.03 270);
-  --bg: oklch(0.15 0.03 270);
-  --bg-light: oklch(0.2 0.03 270);
-  --text: oklch(0.96 0.06 270);
-  --text-muted: oklch(0.76 0.06 270);
-  --highlight: oklch(0.5 0.06 270);
-  --border: oklch(0.4 0.06 270);
-  --border-muted: oklch(0.3 0.06 270);
-  --primary: oklch(0.76 0.1 270);
-  --secondary: oklch(0.76 0.1 90);
-  --danger: oklch(0.7 0.06 30);
-  --warning: oklch(0.7 0.06 100);
-  --success: oklch(0.7 0.06 160);
-  --info: oklch(0.7 0.06 260);
-  --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
+  color-scheme: light;
+  --bg: oklch(0.985 0 0);
+  --surface: oklch(0.96 0 0);
+  --text: oklch(0.2 0 0);
+  --text-muted: oklch(0.47 0 0);
+  --rule: oklch(0.89 0 0);
+  --rule-strong: oklch(0.76 0 0);
+  --frame: oklch(0.22 0 0);
+  --accent: oklch(0.5 0.14 270);
+  --logo-tile: oklch(1 0 0 / 0);
 }
 
-a:link, a:visited {
-  color: var(--text);
-  text-decoration: none;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: oklch(0.13 0 0);
+    --surface: oklch(0.18 0 0);
+    --text: oklch(0.95 0 0);
+    --text-muted: oklch(0.7 0 0);
+    --rule: oklch(0.27 0 0);
+    --rule-strong: oklch(0.42 0 0);
+    --frame: oklch(0.9 0 0);
+    --accent: oklch(0.78 0.1 270);
+    --logo-tile: oklch(0.93 0 0);
+  }
 }
 
-div {
-  border: solid 0px red;
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: oklch(0.13 0 0);
+  --surface: oklch(0.18 0 0);
+  --text: oklch(0.95 0 0);
+  --text-muted: oklch(0.7 0 0);
+  --rule: oklch(0.27 0 0);
+  --rule-strong: oklch(0.42 0 0);
+  --frame: oklch(0.9 0 0);
+  --accent: oklch(0.78 0.1 270);
+  --logo-tile: oklch(0.93 0 0);
 }
 
-h1 {
-  font-size: 64px;
-  margin: 0px;
+/* Expose the variables to Tailwind, so `bg-bg`, `text-muted`, `border-frame`
+   etc. exist and switch theme automatically. `inline` makes the utilities
+   reference var(--bg) directly instead of copying the light value. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--text);
+  --color-muted: var(--text-muted);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-frame: var(--frame);
+  --color-accent: var(--accent);
+  --color-logo-tile: var(--logo-tile);
 }
 
-h2 {
-  margin: 0px;
-  font-size: 32px;
+@theme {
+  --font-serif: "Playfair Display Variable", Georgia, serif;
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-intro: intro-in 0.8s var(--ease-out-expo) both;
+
+  @keyframes intro-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
 }
 
-p {
-  font-size: 20px;
-  margin: 0px;
-  color: var(--text-muted);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased leading-relaxed;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif font-medium tracking-[-0.015em] leading-tight text-balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  section {
+    scroll-margin-top: 64px;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-3 outline-accent;
+  }
+}
+
+/* Underlined text link, like a printed page */
+@utility text-link {
+  @apply underline decoration-rule-strong decoration-1 underline-offset-4 transition-colors;
+
+  &:hover {
+    @apply text-accent decoration-current;
+  }
+}
+
+/* Small mono label used for metadata */
+@utility meta {
+  @apply font-mono text-xs tracking-wide text-muted;
+}
+
+/* One gentle fade-up when sections first come into view (classes set in App.jsx) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  html.canReveal .reveal:not(.isVisible) {
+    opacity: 0;
+    transform: translateY(12px);
+  }
 }
