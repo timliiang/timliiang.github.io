@@ -20,8 +20,8 @@ function About() {
         <div className="space-y-3">
           <p className={`meta ${intro}`}>Toronto, ON</p>
           <h1 className={`mb-5 text-[clamp(40px,7vw,52px)] tracking-[-0.025em] ${intro} [animation-delay:60ms]`}>Tim Liang</h1>
-          <p className={`text-lg font-medium ${intro} [animation-delay:120ms]`}>Fullstack developer.</p>
-          <p className={`max-w-[46ch] text-muted ${intro} [animation-delay:180ms]`}>2nd year undergraduate studying computer science and business.</p>
+          <p className={`text-lg font-medium ${intro} [animation-delay:120ms]`}>Full-stack developer</p>
+          <p className={`max-w-[46ch] text-muted ${intro} [animation-delay:180ms]`}>3rd-year undergraduate building ML models and full-stack apps for financial markets.</p>
           <ul className={`flex flex-wrap gap-5 pt-3 text-[15px] ${intro} [animation-delay:240ms]`}>
             {links.map(({ label, href }) => (
               <li key={label}>
