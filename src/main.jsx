@@ -1,16 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import '@fontsource-variable/playfair-display/wght.css'
+import '@fontsource-variable/geist'
+import '@fontsource-variable/jetbrains-mono'
 import './index.css'
-import About from './Components/About/About.jsx'
-import Nav from './Components/Nav/Nav.jsx'
-import Skills from './Components/Skills/Skills.jsx'
-import Projects from './Components/Projects/Projects.jsx'
+import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Nav />
-    <About />
-    <Skills />
-    <Projects />
+    <App />
   </StrictMode>,
 )
