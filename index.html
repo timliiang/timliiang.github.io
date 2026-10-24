@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tim Liang, fullstack developer in Toronto studying Computer Science at Waterloo and Business at Laurier." />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <title>Tim Liang</title>
-    <script type="module" crossorigin src="/assets/index-BLh-85h3.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DY5cI6JX.css">
+    <!-- Apply a saved theme before first paint so there is no light/dark flash -->
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-RoyfWQT-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DY_gPInN.css">
   </head>
   <body>
     <div id="root"></div>
